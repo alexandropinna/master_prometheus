@@ -1,0 +1,214 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 9,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "P10CA8B1DE6B2B739"
+        },
+        "gridPos": {
+          "h": 1,
+          "w": 12,
+          "x": 0,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "dedupStrategy": "none",
+          "enableLogDetails": true,
+          "prettifyLogMessage": false,
+          "showCommonLabels": false,
+          "showLabels": false,
+          "showTime": false,
+          "sortOrder": "Descending",
+          "wrapLogMessage": false
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "GNziVwsVk"
+            },
+            "editorMode": "builder",
+            "expr": "{container_name=\"authentication-front\"} |= ``",
+            "queryType": "range",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "P10CA8B1DE6B2B739"
+            },
+            "editorMode": "builder",
+            "expr": "{host=\"sadosky-sugicyt-test-01\", container_name=\"authentication-front\"} |= ``",
+            "hide": false,
+            "queryType": "range",
+            "refId": "B"
+          }
+        ],
+        "title": "authentication-front",
+        "type": "logs"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "P10CA8B1DE6B2B739"
+        },
+        "gridPos": {
+          "h": 1,
+          "w": 12,
+          "x": 12,
+          "y": 0
+        },
+        "id": 3,
+        "options": {
+          "dedupStrategy": "none",
+          "enableLogDetails": true,
+          "prettifyLogMessage": false,
+          "showCommonLabels": false,
+          "showLabels": false,
+          "showTime": false,
+          "sortOrder": "Descending",
+          "wrapLogMessage": false
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "P10CA8B1DE6B2B739"
+            },
+            "editorMode": "builder",
+            "expr": "{host=\"sadosky-sugicyt-test-01\", container_name=\"bdu-backend\"} |= ``",
+            "hide": false,
+            "queryType": "range",
+            "refId": "B"
+          }
+        ],
+        "title": "bdu-backend",
+        "type": "logs"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "P10CA8B1DE6B2B739"
+        },
+        "gridPos": {
+          "h": 1,
+          "w": 12,
+          "x": 0,
+          "y": 1
+        },
+        "id": 4,
+        "options": {
+          "dedupStrategy": "none",
+          "enableLogDetails": true,
+          "prettifyLogMessage": false,
+          "showCommonLabels": false,
+          "showLabels": false,
+          "showTime": false,
+          "sortOrder": "Descending",
+          "wrapLogMessage": false
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "P10CA8B1DE6B2B739"
+            },
+            "editorMode": "builder",
+            "expr": "{host=\"sadosky-sugicyt-test-01\", container_name=\"sigeva-backend\"} |= ``",
+            "hide": false,
+            "queryType": "range",
+            "refId": "B"
+          }
+        ],
+        "title": "sigeva-backend",
+        "type": "logs"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "P10CA8B1DE6B2B739"
+        },
+        "gridPos": {
+          "h": 1,
+          "w": 12,
+          "x": 12,
+          "y": 1
+        },
+        "id": 5,
+        "options": {
+          "dedupStrategy": "none",
+          "enableLogDetails": true,
+          "prettifyLogMessage": false,
+          "showCommonLabels": false,
+          "showLabels": false,
+          "showTime": false,
+          "sortOrder": "Descending",
+          "wrapLogMessage": false
+        },
+        "pluginVersion": "9.3.6",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "P10CA8B1DE6B2B739"
+            },
+            "editorMode": "builder",
+            "expr": "{host=\"sadosky-sugicyt-test-01\", container_name=\"db-mincyt\"} |= ``",
+            "hide": false,
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "Base de Datos",
+        "type": "logs"
+      }
+    ],
+    "schemaVersion": 37,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "test-logs",
+    "uid": "k6Au2QyVk",
+    "version": 3,
+    "weekStart": ""
+  }

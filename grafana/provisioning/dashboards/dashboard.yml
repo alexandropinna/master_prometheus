@@ -1,0 +1,42 @@
+apiVersion: 1
+
+providers:
+  - name: 'Logs'
+    orgId: 1
+    folder: 'Logs'
+    type: file
+    disableDeletion: false
+    editable: true
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/logs
+      
+  - name: 'Desarrollo'
+    orgId: 1
+    folder: 'Desarrollo'
+    type: file
+    disableDeletion: false
+    editable: true
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/desarrollo
+
+  - name: 'Testing'
+    orgId: 1
+    folder: 'Testing'
+    type: file
+    disableDeletion: false
+    editable: true
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/testing
+
+  - name: 'Preprod'
+    orgId: 1
+    folder: 'Preprod'
+    type: file
+    disableDeletion: false
+    editable: true
+    allowUiUpdates: true
+    options:
+      path: /etc/grafana/provisioning/dashboards/preprod
